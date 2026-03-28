@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Salary Computation</h2>
+
+  <table>
+    <tr>
+      <th>Description</th>
+      <th>Amount</th>
+    </tr>
+
+    <tr>
+      <td>Basic Salary</td>
+      <td>
+        <input
+          type="number"
+          [(ngModel)]="basicSalary"
+          placeholder="Enter basic salary">
+      </td>
+    </tr>
+
+    <tr>
+      <td>Tax (10%)</td>
+      <td>{{ tax }}</td>
+    </tr>
+
+    <tr>
+      <td>PhilHealth (5%)</td>
+      <td>{{ philhealth }}</td>
+    </tr>
+
+    <tr>
+      <td>Pag-IBIG (2%)</td>
+      <td>{{ pagibig }}</td>
+    </tr>
+
+    <tr>
+      <td>SSS (4%)</td>
+      <td>{{ sss }}</td>
+    </tr>
+
+    <tr>
+      <td><strong>Net Income</strong></td>
+      <td><strong>{{ netIncome }}</strong></td>
+    </tr>
+  </table>
+
+  <button (click)="computeSalary()">Compute</button>
+</div>
